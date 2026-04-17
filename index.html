@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Kushal Bhattarai</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <a href="#hero" class="nav-logo">Kushal<span>Bhattarai</span></a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#art">Art</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#cv">CV</a></li>
+            <li><a href="#contact" class="nav-cta">Contact</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#about" onclick="closeMenu()">About</a>
+        <a href="#services" onclick="closeMenu()">Services</a>
+        <a href="#projects" onclick="closeMenu()">Projects</a>
+        <a href="#art" onclick="closeMenu()">Art</a>
+        <a href="#cv" onclick="closeMenu()">CV</a>
+        <a href="#contact" onclick="closeMenu()">Contact</a>
+    </div>
+
+    <!-- HERO -->
+    <section id="hero">
+        <div class="hero-bg-circle c1"></div>
+        <div class="hero-bg-circle c2"></div>
+        <div class="hero-inner">
+            <div>
+                <div class="hero-tag">
+                    <div class="hero-tag-dot"></div>
+                    Available for freelance work
+                </div>
+                <h1 class="hero-name">
+                    Hi, I'm<br>
+                    <span class="accent">Kushal Bhattarai</span>
+                </h1>
+                <p class="hero-desc">Creative designer & developer crafting beautiful digital experiences that inspire
+                    and engage.</p>
+                <div class="hero-btns">
+                    <a href="#art" class="btn btn-primary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="8" x2="12" y2="16" />
+                            <line x1="8" y1="12" x2="16" y2="12" />
+                        </svg>
+                        View My Art
+                    </a>
+                    <a href="#projects" class="btn btn-primary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7" />
+                            <rect x="14" y="3" width="7" height="7" />
+                            <rect x="14" y="14" width="7" height="7" />
+                            <rect x="3" y="14" width="7" height="7" />
+                        </svg>
+                        View My Projects
+                    </a>
+                    <a href="#cv" class="btn btn-outline">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                        Download CV
+                    </a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://linkedin.com/in/kushal-bhattarai-960819385/" target="_blank" class="social-icon"
+                        title="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                    </a>
+                    <a href="https://github.com/Kushalitgithub" target="_blank" class="social-icon" title="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/kushalbhattarai18" target="_blank" class="social-icon"
+                        title="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg>
+                    </a>
+                    <a href="https://facebook.com/kushal.bhattarai.3194" target="_blank" class="social-icon"
+                        title="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image-wrap">
+                <div class="hero-avatar">
+                    <img src="Elements/Kushal.jpg" alt="">
+                    <span class="hero-avatar-placeholder">👤</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="about-grid">
+            <div class="about-image-wrap fade-up">
+                <div class="about-img-box">
+                    <!-- Replace with: <img src="about-photo.jpg" alt="About me"> -->
+                    <img src="Elements/Aboutme.jpg" alt="About me">
+                </div>
+                <div class="about-badge">
+                    <div class="num">2+</div>
+                    <div class="label">Years of<br>Experience</div>
+                </div>
+            </div>
+            <div class="fade-up">
+                <p class="section-label">About Me</p>
+                <h2 class="section-title">Aspiring Software Developer & Problem Solver</h2>
+                <p style="color:var(--text2); margin-bottom:1rem;">I am a Computer Science student based in Kathmandu,
+                    Nepal, passionate about programming and building real-world solutions through technology. I enjoy
+                    working with Java, Python, and modern web technologies to create efficient, user-friendly
+                    applications.</p>
+                <p style="color:var(--text2); margin-bottom:2rem;">Beyond coding, I am constantly exploring new
+                    technologies, improving my problem-solving skills, and working on projects that challenge me to
+                    grow. I am driven by curiosity and a desire to turn ideas into practical, impactful solutions.</p>
+                <div class="about-skills">
+                    <span class="skill-tag">UI/UX Design</span>
+                    <span class="skill-tag">Illustration</span>
+                    <span class="skill-tag">Digital Art</span>
+                    <span class="skill-tag">Web Development</span>
+                    <span class="skill-tag">Photography</span>
+                    <span class="skill-tag">Branding</span>
+                    <span class="skill-tag">Motion Graphics</span>
+                    <span class="skill-tag">Figma</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+        <div style="max-width:1200px;margin:0 auto;">
+            <p class="section-label fade-up">What I Do</p>
+            <h2 class="section-title fade-up">Services I offer</h2>
+            <p class="section-sub fade-up">Turning ideas into impactful digital and visual experiences.</p>
+            <div class="services-grid">
+                <div class="service-card fade-up">
+                    <div class="service-icon">📊</div>
+                    <h3>Research</h3>
+                    <p>In-depth research, data analysis, report writing, and well-structured academic content tailored
+                        to your needs.</p>
+                </div>
+
+                <div class="service-card fade-up">
+                    <div class="service-icon">💻</div>
+                    <h3>Web Development</h3>
+                    <p>Modern, responsive websites and web applications with clean design, fast performance, and great
+                        user experience.</p>
+                </div>
+
+                <div class="service-card fade-up">
+                    <div class="service-icon">🖼️</div>
+                    <h3>Brand Identity</h3>
+                    <p>Creative logos, color palettes, typography, and brand guidelines to build a strong and memorable
+                        identity.</p>
+                </div>
+
+                <div class="service-card fade-up">
+                    <div class="service-icon">🤖</div>
+                    <h3>AI</h3>
+                    <p>AI-powered solutions including automation, content generation, and smart tools to enhance
+                        productivity and innovation.</p>
+                </div>
+
+                <div class="service-card fade-up">
+                    <div class="service-icon">🎨</div>
+                    <h3>Sketches & Art with Emotions</h3>
+                    <p>
+                        Expressive sketches and artistic illustrations that capture emotions, ideas, and storytelling
+                        through visual creativity.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <div class="art-header">
+            <p class="section-label fade-up">Projects</p>
+            <h2 class="section-title fade-up">My Development Work</h2>
+            <p class="section-sub fade-up">
+                A collection of my web, AI, and research-based projects.
+            </p>
+        </div>
+
+        <div class="art-grid" id="projectGrid"></div>
+    </section>
+
+    <!-- ART GALLERY -->
+    <section id="art">
+        <div class="art-header">
+            <p class="section-label fade-up">Portfolio</p>
+            <h2 class="section-title fade-up">My Artwork</h2>
+            <p class="section-sub fade-up">A collection of my creative work across different styles and mediums.</p>
+            <div class="art-filter fade-up">
+                <button class="filter-btn active" data-filter="all">All Works</button>
+            </div>
+        </div>
+        <div class="art-grid" id="artGrid">
+            <!-- Art cards generated by JS -->
+        </div>
+    </section>
+
+    <!-- CV DOWNLOAD -->
+    <section id="cv">
+        <div class="cv-inner fade-up">
+            <p class="section-label">Resume</p>
+            <div class="cv-card">
+                <div class="cv-bg-accent"></div>
+                <div class="cv-icon">📄</div>
+                <h2 class="cv-title">Download My CV</h2>
+                <p class="cv-desc">Get a comprehensive overview of my skills, experience, education, and creative
+                    background.</p>
+                <a href="Elements/Kushal_Bhattarai_CV.pdf" download class="cv-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    Download CV (PDF)
+                </a>
+                <div class="cv-meta">
+                    <div class="cv-meta-item"><strong>2+</strong><span>Years Exp.</span></div>
+                    <div class="cv-meta-item"><strong>10+</strong><span>Projects Done</span></div>
+                    <div class="cv-meta-item"><strong>5+</strong><span>Happy Clients</span></div>
+                    <div class="cv-meta-item"><strong>5★</strong><span>Avg. Rating</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="contact-grid">
+            <div class="fade-up">
+                <p class="section-label">Get In Touch</p>
+                <h2 class="section-title">Let's work<br>together</h2>
+                <p style="color:var(--text2);margin-bottom:0.5rem;">Have a project in mind? I'd love to hear about it.
+                    Send me a message and let's create something amazing.</p>
+                <div class="contact-info-cards">
+                    <a href="mailto:kushalbhattarai100@gmail.com" class="contact-info-card">
+                        <div class="contact-info-icon">✉️</div>
+                        <div><strong>Email</strong><br><span>kushalbhattarai100@gmail.com</span></div>
+                    </a>
+                    <a href="tel:+9779768292746" class="contact-info-card">
+                        <div class="contact-info-icon">📞</div>
+                        <div><strong>Phone</strong><br><span>+977 9768292746</span></div>
+                    </a>
+                    <div class="contact-info-card" style="cursor:default;">
+                        <div class="contact-info-icon">📍</div>
+                        <div><strong>Location</strong><br><span>Kathmandu, Nepal</span></div>
+                    </div>
+                </div>
+                <div class="contact-social-row">
+                    <a href="https://linkedin.com/in/kushal-bhattarai-960819385/" target="_blank" class="social-icon"
+                        title="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                    </a>
+                    <a href="https://github.com/Kushalitgithub" target="_blank" class="social-icon" title="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/kushalbhattarai18" target="_blank" class="social-icon"
+                        title="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"
+                            height="18">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg>
+                    </a>
+                    <a href="https://facebook.com/kushal.bhattarai.3194" target="_blank" class="social-icon"
+                        title="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="contact-form fade-up">
+                <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:1.5rem;">Send a Message</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" placeholder="Your first name">
+                    </div>
+                    <div class="form-group">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" placeholder="Your last name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="your@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" placeholder="What's this about?">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="Tell me about your project..."></textarea>
+                </div>
+                <button class="submit-btn" onclick="submitForm()">Send Message →</button>
+                <div class="form-success" id="formSuccess">✅ Message sent! I'll get back to you soon.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-logo">Kushal<span>Bhattarai</span></div>
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#art">Art</a>
+                <a href="#projects">Projects</a>
+                <a href="#cv">CV</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-socials">
+                <a href="https://linkedin.com/in/kushal-bhattarai-960819385/" target="_blank" class="footer-social"
+                    title="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                        <rect x="2" y="9" width="4" height="12" />
+                        <circle cx="4" cy="4" r="2" />
+                    </svg>
+                </a>
+                <a href="https://github.com/kushalitgithub" target="_blank" class="footer-social" title="GitHub">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                    </svg>
+                </a>
+                <a href="https://instagram.com/kushalbhattarai18" target="_blank" class="footer-social"
+                    title="Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                    </svg>
+                </a>
+                <a href="https://facebook.com/kushal.bhattarai.3194" target="_blank" class="footer-social"
+                    title="Facebook">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                    </svg>
+                </a>
+            </div>
+            <p class="footer-copy">© 2026 KushalBhattarai. All rights reserved</p>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <div class="lightbox-content" id="lightboxContent">
+            <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+            <div class="lightbox-img" id="lightboxImg"></div>
+            <div class="lightbox-info">
+                <h3 id="lightboxTitle" style="font-weight:700;margin-bottom:4px;"></h3>
+                <span id="lightboxCat" style="font-size:0.8rem;color:var(--accent-dark);font-weight:600;"></span>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="script.js"></script>
+
+</html>
