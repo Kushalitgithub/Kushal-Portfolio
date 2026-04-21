@@ -18,19 +18,19 @@ const pinterestBoards = [
     {
         title: "Sketch 2",
         description: "Expressive pencil sketches capturing emotions and stories",
-        url: "https://www.pinterest.com/kushalbhattarai100/portraits/", // ← replace
+        url: "https://www.pinterest.com/kushalbhattarai100/?actingBusinessId=1140114599325219118", // ← replace
         cover: "Elements/Arts/2.jpg"
     },
     {
         title: "Sketch 3",
         description: "Expressive pencil sketches capturing emotions and stories",
-        url: "https://www.pinterest.com/kushalbhattarai100/nature/", // ← replace
+        url: "https://www.pinterest.com/kushalbhattarai100/?actingBusinessId=1140114599325219118", // ← replace
         cover: "Elements/Arts/3.jpg"
     },
     {
         title: "Sketch 4",
         description: "Expressive pencil sketches capturing emotions and stories",
-        url: "https://www.pinterest.com/kushalbhattarai100/abstract/", // ← replace
+        url: "https://www.pinterest.com/kushalbhattarai100/?actingBusinessId=1140114599325219118", // ← replace
         cover: "Elements/Arts/4.jpg"
     }
 ];
